@@ -473,6 +473,33 @@ nav ul li a:hover:after {
     color: rgba(255, 255, 255, 0.4);
 }
 
+/* Estilos para botones de PayPal */
+.paypal-button-container {
+    margin-top: 20px;
+    min-height: 40px;
+    width: 100%;
+    display: block;
+}
+
+.pricing-card .paypal-button-container {
+    width: 100%;
+    min-width: 200px;
+}
+
+#paypal-container-N25RF75LASFZC,
+#paypal-container-SVFDW97363F4W,
+#paypal-container-ANYUVDW5XWVQ8 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pricing-card .paypal-button-container .paypal-buttons {
+    width: 100% !important;
+    min-width: 200px !important;
+    margin: 0 auto;
+    display: block;
+}
+
 .hosting-message {
     text-align: center;
     margin-top: 40px;
@@ -842,4 +869,22 @@ footer {
     .section-light {
         padding: 20px;
     }
+}
+/* Si quieres que todos los elementos del formulario tengan texto negro */
+.formulario input,
+.formulario select,
+.formulario textarea {
+    color: #bdb6b6 !important;
+}
+
+.formulario select option {
+    color: #252424 !important;
+    background-color: rgb(194, 189, 189) !important;
+}
+
+/* Para que el placeholder también sea visible */
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+    color: #2e2e2e !important;
+    opacity: 1;
 }
