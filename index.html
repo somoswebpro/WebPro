@@ -17,6 +17,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- PayPal SDK (Parte 1 - Solo una vez) -->
+    <script 
+      src="https://www.paypal.com/sdk/js?client-id=BAAizpMzJjgFLjTi0DTCNgtcZt5oLLhiplsFp5jjtRzvMIeGm-rJYvlE0P_v9myQXKvf8P3dnfI8qa3PUU&components=hosted-buttons&disable-funding=venmo&currency=MXN">
+    </script>
+    
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -143,10 +148,9 @@
                             <li>SEO basico</li>
                             <li>Integración con WhatsApp</li>
                             <li>Entrega en 7-10 días</li>
-                            <li class="disabled">Tienda online</li>
-                            <li class="disabled">Carrito de compras</li>
                         </ul>
-                        <a href="https://www.paypal.com/YOUR_BASIC_PLAN_LINK" class="btn btn-outline" target="_blank">Solicitar</a>
+                        <!-- Botón PayPal para Plan Básico -->
+                        <div id="paypal-container-N25RF75LASFZC" class="paypal-button-container"></div>
                     </div>
                     
                     <div class="pricing-card popular">
@@ -162,9 +166,9 @@
                             <li>Integración con redes sociales</li>
                             <li>Google Analytics configurado</li>
                             <li>1 mes de soporte gratis</li>
-                            <li class="disabled">Tienda online completa</li>
                         </ul>
-                        <a href="https://www.paypal.com/YOUR_PROFESSIONAL_PLAN_LINK" class="btn" target="_blank">Solicitar</a>
+                        <!-- Botón PayPal para Plan Profesional -->
+                        <div id="paypal-container-SVFDW97363F4W" class="paypal-button-container"></div>
                     </div>
                     
                     <div class="pricing-card">
@@ -174,13 +178,13 @@
                         <ul class="pricing-features">
                             <li>Todo lo del plan Profesional</li>
                             <li>Catálogo de productos</li>
-                            <li>Carrito de compras</li>
                             <li>Pasarela de pagos</li>
                             <li>Panel de administración</li>
                             <li>3 meses de soporte gratis</li>
                             <li>Capacitación incluida</li>
                         </ul>
-                        <a href="https://www.paypal.com/YOUR_PREMIUM_PLAN_LINK" class="btn btn-outline" target="_blank">Solicitar</a>
+                        <!-- Botón PayPal para Plan Premium -->
+                        <div id="paypal-container-ANYUVDW5XWVQ8" class="paypal-button-container"></div>
                     </div>
                 </div>
                 
@@ -277,7 +281,6 @@
                                     <option value="Plan Premium">Plan Premium</option>
                                     <option value="Landing Page">Landing Page</option>
                                     <option value="Página Web Completa">Página Web Completa</option>
-                                    <option value="Tienda Online">Tienda Online</option>
                                     <option value="Personalizado">Personalizado</option>
                                 </select>
                             </label>
@@ -306,10 +309,10 @@
                     <h3>WebPro</h3>
                     <p>Páginas web profesionales que venden por ti 24/7. Desarrollo soluciones digitales enfocadas en resultados para negocios reales.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/TU_PAGINA_DE_FACEBOOK"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/somoswebpro_24/?utm_source=ig_web_button_share_sheet"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/TU_USUARIO_LINKEDIN"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/TU_USUARIO_TWITTER"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 
@@ -350,6 +353,24 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scripts para botones de PayPal (Parte 2) -->
+    <script>
+      // Botón para Plan Básico
+      paypal.HostedButtons({
+        hostedButtonId: "N25RF75LASFZC",
+      }).render("#paypal-container-N25RF75LASFZC");
+
+      // Botón para Plan Profesional
+      paypal.HostedButtons({
+        hostedButtonId: "SVFDW97363F4W",
+      }).render("#paypal-container-SVFDW97363F4W");
+
+      // Botón para Plan Premium
+      paypal.HostedButtons({
+        hostedButtonId: "ANYUVDW5XWVQ8",
+      }).render("#paypal-container-ANYUVDW5XWVQ8");
+    </script>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
